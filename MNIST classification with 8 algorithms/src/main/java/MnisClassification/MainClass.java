@@ -27,14 +27,14 @@ import static io.vavr.API.println;
 public class MainClass {
     public static void main(String[] args) throws IOException {
 
-        var AttName = new BufferedReader(new FileReader(new File("C:\\Users\\LENOVO\\IdeaProjects\\MNIST_CSV_Classification\\mnist_header.csv")));
+        var AttName = new BufferedReader(new FileReader(new File("Path...\\mnist_header.csv")));
         var header = AttName.readLine().split(",");
 
-        var TrainData = new CSVLoader<>(new LabelFactory()).loadDataSource(Paths.get("C:\\Users\\LENOVO\\IdeaProjects\\MNIST_CSV_Classification\\mnist_train.csv")
+        var TrainData = new CSVLoader<>(new LabelFactory()).loadDataSource(Paths.get("Path...\\mnist_train.csv")
                 ,header[header.length - 1]
                 ,header);
 
-        var TestData = new CSVLoader<>(new LabelFactory()).loadDataSource(Paths.get("C:\\Users\\LENOVO\\IdeaProjects\\MNIST_CSV_Classification\\mnist_test.csv")
+        var TestData = new CSVLoader<>(new LabelFactory()).loadDataSource(Paths.get("Path...\\mnist_test.csv")
                 ,header[header.length - 1]
                 ,header);
 
